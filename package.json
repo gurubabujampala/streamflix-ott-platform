@@ -2,7 +2,7 @@
   "name": "ott-platform",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://[YOUR-NETLIFY-URL]",
+  "homepage": "https://streamflixottapp.netlify.app",
   "type": "module",
   "scripts": {
     "dev": "vite",

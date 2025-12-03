@@ -41,8 +41,8 @@ After deploying to Netlify, you'll need to update these placeholders with your a
 **Status**: [![Netlify Status](https://api.netlify.com/api/v1/badges/[YOUR-SITE-ID]/deploy-status)](https://app.netlify.com/sites/[YOUR-SITE-NAME]/deploys)
 
 # AFTER (with your values):
-**URL**: https://StreamFlix.netlify.app  
-**Status**: [![Netlify Status](https://api.netlify.com/api/v1/badges/65f4a2b1-3c8d-4e9f-a7b2-1234567890ab/deploy-status)](https://app.netlify.com/sites/StreamFlix/deploys)
+**URL**: https://streamflixottapp.netlify.app  
+**Status**: [![Netlify Status](https://api.netlify.com/api/v1/badges/65f4a2b1-3c8d-4e9f-a7b2-1234567890ab/deploy-status)](https://app.netlify.com/sites/streamflixottapp/deploys)
 ```
 
 ### File: `package.json` (Optional)
@@ -55,7 +55,7 @@ After deploying to Netlify, you'll need to update these placeholders with your a
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://StreamFlix.netlify.app",  // ← Add this line
+  "homepage": "https://streamflixottapp.netlify.app",  // ← Add this line
   "scripts": {
     ...
   }
@@ -66,12 +66,12 @@ After deploying to Netlify, you'll need to update these placeholders with your a
 
 ## 3️⃣ Example Values
 
-Here's a complete example if your site name is `StreamFlix`:
+Here's a complete example if your site name is `streamflixottapp`:
 
 | Placeholder | Example Value |
 |-------------|---------------|
-| `[YOUR-NETLIFY-URL]` | `https://StreamFlix.netlify.app` |
-| `[YOUR-SITE-NAME]` | `StreamFlix` |
+| `[YOUR-NETLIFY-URL]` | `https://streamflixottapp.netlify.app` |
+| `[YOUR-SITE-NAME]` | `streamflixottapp` |
 | `[YOUR-SITE-ID]` | `65f4a2b1-3c8d-4e9f-a7b2-1234567890ab` |
 
 ---
@@ -82,13 +82,13 @@ Here's a complete example if your site name is `StreamFlix`:
 
 ```bash
 # Navigate to project
-cd /Users/gurubabujampala/workspace/antigravity/ott-platform
+cd /Users/gurubabujampala/workspace/antigravity/streamflix-ott-platform
 
 # Replace URL (update with YOUR actual URL)
-sed -i '' 's|\[YOUR-NETLIFY-URL\]|https://StreamFlix.netlify.app|g' README.md
+sed -i '' 's|\[YOUR-NETLIFY-URL\]|https://streamflixottapp.netlify.app|g' README.md
 
 # Replace Site Name (update with YOUR actual site name)
-sed -i '' 's|\[YOUR-SITE-NAME\]|StreamFlix|g' README.md
+sed -i '' 's|\[YOUR-SITE-NAME\]|streamflixottapp|g' README.md
 
 # Replace Site ID (update with YOUR actual site ID)
 sed -i '' 's|\[YOUR-SITE-ID\]|65f4a2b1-3c8d-4e9f-a7b2-1234567890ab|g' README.md
@@ -134,7 +134,7 @@ grep -r "\[YOUR-" README.md package.json
 
 ## 6️⃣ Optional: Custom Domain
 
-If you want a custom domain (e.g., `StreamFlix.com`):
+If you want a custom domain (e.g., `streamflixottapp.com`):
 
 1. **Purchase domain** from registrar (Namecheap, GoDaddy, etc.)
 
@@ -151,12 +151,12 @@ If you want a custom domain (e.g., `StreamFlix.com`):
    
    Type: CNAME
    Name: www
-   Value: StreamFlix.netlify.app
+   Value: streamflixottapp.netlify.app
    ```
 
 4. **Update placeholders** with custom domain:
    ```markdown
-   **URL**: https://StreamFlix.com
+   **URL**: https://streamflixottapp.com
    ```
 
 5. **SSL Certificate:** Provisioned automatically by Netlify

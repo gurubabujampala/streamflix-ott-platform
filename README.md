@@ -4,10 +4,10 @@ Your Ultimate Entertainment Destination - A production-ready React application f
 
 ## 🌐 Live Demo
 
-**URL**: [YOUR-NETLIFY-URL]  
-**Status**: [![Netlify Status](https://api.netlify.com/api/v1/badges/[YOUR-SITE-ID]/deploy-status)](https://app.netlify.com/sites/[YOUR-SITE-NAME]/deploys)
+**URL**: https://streamflixottapp.netlify.app  
+**Status**: [![Netlify Status](https://api.netlify.com/api/v1/badges/[YOUR-SITE-ID]/deploy-status)](https://app.netlify.com/sites/streamflixottapp/deploys)
 
-> **Note**: After deploying to Netlify, replace `[YOUR-NETLIFY-URL]`, `[YOUR-SITE-ID]`, and `[YOUR-SITE-NAME]` with your actual values.
+> **Note**: After deploying to Netlify, replace `[YOUR-SITE-ID]` with your actual value.
 > See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for detailed instructions.
 
 ## 🎯 Features
@@ -280,9 +280,7 @@ function Movies() {
    - Click "Deploy site"
 
 3. **Update URLs** (After deployment)
-   - Replace `[YOUR-NETLIFY-URL]` in this README
    - Replace `[YOUR-SITE-ID]` with your Netlify site ID
-   - Replace `[YOUR-SITE-NAME]` with your Netlify site name
 
 **Detailed Instructions**: See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for complete step-by-step guide.
 
