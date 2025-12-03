@@ -1,0 +1,118 @@
+# Netlify Build Configuration
+# This file configures how Netlify builds and deploys your site
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Directory to change to before starting the build
+  base = "."
+  
+  # Command to build the site
+  command = "npm run build"
+  
+  # Directory that contains the built site files
+  publish = "dist"
+
+# Production build settings
+[build.environment]
+  # Node.js version (matches your local development)
+  NODE_VERSION = "22"
+  
+  # NPM version
+  NPM_VERSION = "10.9.0"
+
+# Redirect rules
+[[redirects]]
+  # SPA fallback - all routes go to index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Cache control for static assets
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    # Don't cache the main HTML file
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    # Cache JavaScript files for 1 year
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    # Cache CSS files for 1 year
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    # Cache images for 1 year
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    # Cache images for 1 year
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    # Cache images for 1 year
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ============================================
+# DEPLOYMENT INSTRUCTIONS
+# ============================================
+# 
+# Before deploying to Netlify:
+# 
+# 1. Create a Netlify account at https://www.netlify.com
+# 
+# 2. Option A: Deploy via Git (Recommended)
+#    - Connect your GitHub repository to Netlify
+#    - Netlify will auto-detect this configuration
+#    - Every push to main branch will auto-deploy
+# 
+# 3. Option B: Manual Deploy via CLI
+#    - Install: npm install -g netlify-cli
+#    - Login: netlify login
+#    - Deploy: netlify deploy --prod
+# 
+# 4. After deployment, update these files with your Netlify URL:
+#    - README.md (replace [YOUR-NETLIFY-URL])
+#    - docs/DEPLOYMENT.md (replace [YOUR-SITE-NAME])
+#    - package.json (optional: add homepage field)
+# 
+# ============================================
+
+# Optional: Deploy previews for pull requests
+[context.deploy-preview]
+  command = "npm run build"
+
+# Optional: Branch-specific deploys
+[context.branch-deploy]
+  command = "npm run build"
+
+# Optional: Development branch settings
+[context.develop]
+  command = "npm run build"
+  
+# Plugin configuration (optional)
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
