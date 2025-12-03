@@ -4,15 +4,12 @@ import { artists } from '../data/musicData';
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
 
-// Using the same video for music demo - in real app this would be an audio player
-const SAMPLE_MUSIC_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
 function Artists() {
     const [selectedContent, setSelectedContent] = useState(null);
     const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
-    const handleCardClick = (name) => {
-        setSelectedContent({ title: `${name} - Live Performance`, url: SAMPLE_MUSIC_URL });
+    const handleCardClick = (name, videoUrl) => {
+        setSelectedContent({ title: `${name} - Music Video`, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -37,7 +34,7 @@ function Artists() {
                             description={`${artist.albums} Albums`}
                             type="music"
                             image={artist.image}
-                            onClick={() => handleCardClick(artist.name)}
+                            onClick={() => handleCardClick(artist.name, artist.videoUrl)}
                         />
                     ))}
                 </div>

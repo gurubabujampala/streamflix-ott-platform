@@ -1,48 +1,38 @@
-import { useState } from 'react';
 import { games, gameCategories } from '../data/gamesData';
 import Card from '../components/common/Card';
-import VideoPlayer from '../components/common/VideoPlayer';
-
-const SAMPLE_VIDEO_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
 
 function MovieGames() {
-    const [selectedContent, setSelectedContent] = useState(null);
-    const [isPlayerOpen, setIsPlayerOpen] = useState(false);
-
-    const handleCardClick = (title) => {
-        setSelectedContent({ title: `${title} - Game Demo`, url: SAMPLE_VIDEO_URL });
-        setIsPlayerOpen(true);
-    };
-
-    const handleClosePlayer = () => {
-        setIsPlayerOpen(false);
-        setTimeout(() => setSelectedContent(null), 300);
+    const handleGameClick = (gameUrl) => {
+        // Open game in new tab
+        window.open(gameUrl, '_blank');
     };
 
     return (
         <div className="page">
             <div className="container">
                 <h1 className="page-title">Movie Games</h1>
+                <p style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--text-secondary)' }}>
+                    Click any game to play free browser-based movie games!
+                </p>
 
                 {gameCategories.map(category => {
                     const categoryGames = games.filter(game => game.category === category);
-
                     if (categoryGames.length === 0) return null;
 
                     return (
                         <section key={category} style={{ marginBottom: '3rem' }}>
-                            <h2>{category}</h2>
+                            <h2>{category} Games</h2>
                             <div className="card-grid">
                                 {categoryGames.map(game => (
                                     <Card
                                         key={game.id}
                                         title={game.title}
-                                        meta={`${game.category} • ${game.players} Players`}
+                                        meta={`${game.category} • ${game.players} players`}
                                         rating={game.rating}
                                         description={game.description}
                                         type="game"
                                         image={game.image}
-                                        onClick={() => handleCardClick(game.title)}
+                                        onClick={() => handleGameClick(game.videoUrl)}
                                     />
                                 ))}
                             </div>
@@ -50,15 +40,6 @@ function MovieGames() {
                     );
                 })}
             </div>
-
-            {selectedContent && (
-                <VideoPlayer
-                    videoUrl={selectedContent.url}
-                    title={selectedContent.title}
-                    onClose={handleClosePlayer}
-                    isOpen={isPlayerOpen}
-                />
-            )}
         </div>
     );
 }

@@ -4,15 +4,12 @@ import { musicGenres, getArtistsByGenre, getAlbumsByGenre } from '../data/musicD
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
 
-const SAMPLE_MUSIC_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
 function MusicGenres() {
     const [selectedContent, setSelectedContent] = useState(null);
     const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
-    const handleCardClick = (title, subtitle = '') => {
-        const fullTitle = subtitle ? `${title} - ${subtitle}` : title;
-        setSelectedContent({ title: fullTitle, url: SAMPLE_MUSIC_URL });
+    const handleCardClick = (title, videoUrl) => {
+        setSelectedContent({ title, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -50,12 +47,12 @@ function MusicGenres() {
                                         description={`${artist.albums} Albums`}
                                         type="music"
                                         image={artist.image}
-                                        onClick={() => handleCardClick(artist.name, 'Live Performance')}
+                                        onClick={() => handleCardClick(`${artist.name} - Music Video`, artist.videoUrl)}
                                     />
                                 ))}
                             </div>
 
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}> Albums</h3>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Albums</h3>
                             <div className="card-grid">
                                 {genreAlbums.map(album => (
                                     <Card
@@ -66,7 +63,7 @@ function MusicGenres() {
                                         description={album.artist}
                                         type="music"
                                         image={album.image}
-                                        onClick={() => handleCardClick(album.artist, album.title)}
+                                        onClick={() => handleCardClick(`${album.title} - ${album.artist}`, album.videoUrl)}
                                     />
                                 ))}
                             </div>

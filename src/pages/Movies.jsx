@@ -4,14 +4,12 @@ import { genres, movies } from '../data/moviesData';
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
 
-const SAMPLE_VIDEO_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
 function Movies() {
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
-    const handleCardClick = (title) => {
-        setSelectedVideo({ title, url: SAMPLE_VIDEO_URL });
+    const handleCardClick = (title, videoUrl) => {
+        setSelectedVideo({ title, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -48,7 +46,7 @@ function Movies() {
                             description={movie.description}
                             type="movie"
                             image={movie.image}
-                            onClick={() => handleCardClick(movie.title)}
+                            onClick={() => handleCardClick(movie.title, movie.videoUrl)}
                         />
                     ))}
                 </div>

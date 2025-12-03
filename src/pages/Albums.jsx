@@ -4,14 +4,12 @@ import { albums } from '../data/musicData';
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
 
-const SAMPLE_MUSIC_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
 function Albums() {
     const [selectedContent, setSelectedContent] = useState(null);
     const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
-    const handleCardClick = (title, artist) => {
-        setSelectedContent({ title: `${artist} - ${title}`, url: SAMPLE_MUSIC_URL });
+    const handleCardClick = (title, videoUrl) => {
+        setSelectedContent({ title: `${title} - Music Video`, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -25,17 +23,18 @@ function Albums() {
             <div className="container">
                 <h1 className="page-title">Albums</h1>
 
+                <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>All Albums</h2>
                 <div className="card-grid">
                     {albums.map(album => (
                         <Card
                             key={album.id}
                             title={album.title}
-                            meta={`${album.year} • ${album.genre}`}
+                            meta={`${album.artist} • ${album.year}`}
                             rating={`🎵 ${album.tracks} tracks`}
-                            description={album.artist}
+                            description={album.genre}
                             type="music"
                             image={album.image}
-                            onClick={() => handleCardClick(album.title, album.artist)}
+                            onClick={() => handleCardClick(album.title, album.videoUrl)}
                         />
                     ))}
                 </div>
@@ -43,6 +42,9 @@ function Albums() {
                 <div style={{ marginTop: '3rem', textAlign: 'center' }}>
                     <Link to="/music" className="btn">
                         ← Back to Music Hub
+                    </Link>
+                    <Link to="/music/genres" className="btn" style={{ marginLeft: '1rem' }}>
+                        Browse by Genre
                     </Link>
                 </div>
             </div>

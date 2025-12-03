@@ -4,8 +4,6 @@ import { getSeriesByGenre, seriesGenres } from '../data/seriesData';
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
 
-const SAMPLE_VIDEO_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
 function SeriesByGenre() {
     const { genre } = useParams();
     const [selectedVideo, setSelectedVideo] = useState(null);
@@ -14,8 +12,8 @@ function SeriesByGenre() {
     const genreCapitalized = genre.charAt(0).toUpperCase() + genre.slice(1);
     const filteredSeries = getSeriesByGenre(genreCapitalized);
 
-    const handleCardClick = (title) => {
-        setSelectedVideo({ title, url: SAMPLE_VIDEO_URL });
+    const handleCardClick = (title, videoUrl) => {
+        setSelectedVideo({ title, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -27,7 +25,7 @@ function SeriesByGenre() {
     return (
         <div className="page">
             <div className="container">
-                <h1 className="page-title">{genreCapitalized} Web Series</h1>
+                <h1 className="page-title">{genreCapitalized} Series</h1>
 
                 <div className="genre-filter">
                     <Link to="/web-series" className="genre-btn">
@@ -57,7 +55,7 @@ function SeriesByGenre() {
                             description={series.description}
                             type="series"
                             image={series.image}
-                            onClick={() => handleCardClick(series.title)}
+                            onClick={() => handleCardClick(series.title, series.videoUrl)}
                         />
                     ))}
                 </div>

@@ -1,17 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { series, seriesGenres } from '../data/seriesData';
+import { seriesGenres, series } from '../data/seriesData';
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
-
-const SAMPLE_VIDEO_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
 
 function WebSeries() {
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
-    const handleCardClick = (title) => {
-        setSelectedVideo({ title, url: SAMPLE_VIDEO_URL });
+    const handleCardClick = (title, videoUrl) => {
+        setSelectedVideo({ title, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -48,7 +46,7 @@ function WebSeries() {
                             description={s.description}
                             type="series"
                             image={s.image}
-                            onClick={() => handleCardClick(s.title)}
+                            onClick={() => handleCardClick(s.title, s.videoUrl)}
                         />
                     ))}
                 </div>

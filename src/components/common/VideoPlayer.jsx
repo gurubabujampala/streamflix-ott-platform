@@ -18,13 +18,13 @@ function VideoPlayer({ videoUrl, title, onClose, isOpen }) {
 
     // Check if URL is a YouTube link
     const isYouTube = videoUrl?.includes('youtube.com') || videoUrl?.includes('youtu.be');
-    
+
     // Extract YouTube video ID and create embed URL
     const getYouTubeEmbedUrl = (url) => {
         if (!url) return '';
-        
+
         let videoId = '';
-        
+
         // Handle different YouTube URL formats
         if (url.includes('youtube.com/watch?v=')) {
             videoId = url.split('v=')[1]?.split('&')[0];
@@ -33,7 +33,7 @@ function VideoPlayer({ videoUrl, title, onClose, isOpen }) {
         } else if (url.includes('youtube.com/embed/')) {
             videoId = url.split('embed/')[1]?.split('?')[0];
         }
-        
+
         return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : url;
     };
 

@@ -5,9 +5,6 @@ import { getFeaturedSeries } from '../data/seriesData';
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
 
-// Free sample video (Creative Commons licensed)
-const SAMPLE_VIDEO_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
 function Home() {
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [isPlayerOpen, setIsPlayerOpen] = useState(false);
@@ -15,8 +12,8 @@ function Home() {
     const featuredMovies = getFeaturedMovies().slice(0, 4);
     const featuredSeries = getFeaturedSeries().slice(0, 4);
 
-    const handleCardClick = (title) => {
-        setSelectedVideo({ title, url: SAMPLE_VIDEO_URL });
+    const handleCardClick = (title, videoUrl) => {
+        setSelectedVideo({ title, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -50,7 +47,7 @@ function Home() {
                                 description={movie.description}
                                 type="movie"
                                 image={movie.image}
-                                onClick={() => handleCardClick(movie.title)}
+                                onClick={() => handleCardClick(movie.title, movie.videoUrl)}
                             />
                         ))}
                     </div>
@@ -73,7 +70,7 @@ function Home() {
                                 description={series.description}
                                 type="series"
                                 image={series.image}
-                                onClick={() => handleCardClick(series.title)}
+                                onClick={() => handleCardClick(series.title, series.videoUrl)}
                             />
                         ))}
                     </div>

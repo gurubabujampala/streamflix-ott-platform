@@ -4,8 +4,6 @@ import { getMoviesByGenre, genres } from '../data/moviesData';
 import Card from '../components/common/Card';
 import VideoPlayer from '../components/common/VideoPlayer';
 
-const SAMPLE_VIDEO_URL = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
 function MoviesByGenre() {
     const { genre } = useParams();
     const [selectedVideo, setSelectedVideo] = useState(null);
@@ -14,8 +12,8 @@ function MoviesByGenre() {
     const genreCapitalized = genre.charAt(0).toUpperCase() + genre.slice(1);
     const filteredMovies = getMoviesByGenre(genreCapitalized);
 
-    const handleCardClick = (title) => {
-        setSelectedVideo({ title, url: SAMPLE_VIDEO_URL });
+    const handleCardClick = (title, videoUrl) => {
+        setSelectedVideo({ title, url: videoUrl });
         setIsPlayerOpen(true);
     };
 
@@ -57,7 +55,7 @@ function MoviesByGenre() {
                             description={movie.description}
                             type="movie"
                             image={movie.image}
-                            onClick={() => handleCardClick(movie.title)}
+                            onClick={() => handleCardClick(movie.title, movie.videoUrl)}
                         />
                     ))}
                 </div>
