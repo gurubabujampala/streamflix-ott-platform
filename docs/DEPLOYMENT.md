@@ -76,14 +76,14 @@ Publish directory: dist
 
 1. Click **"Deploy site"**
 2. Wait 1-2 minutes for deployment
-3. Your site will be live at: `https://[random-name].netlify.app`
+3. Your site will be live at: `https://streamflixottapp.netlify.app`
 
 ### 3.4 Customize Your URL (Optional)
 
 1. Go to **Site settings** → **Domain management**
 2. Click **"Options"** → **"Edit site name"**
 3. Change to: `StreamFlix` (if available)
-4. Your URL becomes: `https://StreamFlix.netlify.app`
+4. Your URL becomes: `https://streamflixottapp.netlify.app`
 
 ---
 
