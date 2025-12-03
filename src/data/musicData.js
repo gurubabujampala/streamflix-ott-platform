@@ -16,7 +16,8 @@ export const artists = [
         genre: 'Pop',
         albums: 10,
         followers: '100M',
-        image: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=e-ORhEE9VVg' // Taylor Swift - Blank Space
     },
     {
         id: 2,
@@ -24,7 +25,8 @@ export const artists = [
         genre: 'Rock',
         albums: 15,
         followers: '40M',
-        image: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ' // Queen - Bohemian Rhapsody
     },
     {
         id: 3,
@@ -32,7 +34,8 @@ export const artists = [
         genre: 'Electronic',
         albums: 4,
         followers: '25M',
-        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=FGBhQbmPwH8' // Daft Punk - Get Lucky
     },
     {
         id: 4,
@@ -40,7 +43,8 @@ export const artists = [
         genre: 'Hip-Hop',
         albums: 11,
         followers: '60M',
-        image: 'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=_Yhyp-_hX2s' // Eminem - Lose Yourself
     },
     {
         id: 5,
@@ -48,7 +52,8 @@ export const artists = [
         genre: 'Jazz',
         albums: 50,
         followers: '5M',
-        image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=ylXk1LBvIqU' // Miles Davis - So What
     },
     {
         id: 6,
@@ -56,7 +61,8 @@ export const artists = [
         genre: 'Classical',
         albums: 100,
         followers: '10M',
-        image: 'https://images.unsplash.com/photo-1507838153414-b4b713384ebd?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1507838153414-b4b713384ebd?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=t3217H8JppI' // Beethoven - Symphony No. 5
     },
     {
         id: 7,
@@ -64,7 +70,8 @@ export const artists = [
         genre: 'Country',
         albums: 60,
         followers: '15M',
-        image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=8AHCfZTRGiI' // Johnny Cash - Hurt
     },
     {
         id: 8,
@@ -72,7 +79,8 @@ export const artists = [
         genre: 'R&B',
         albums: 7,
         followers: '80M',
-        image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=ViwtNLUqkMY' // Beyoncé - Single Ladies
     },
 ];
 
@@ -85,7 +93,8 @@ export const albums = [
         genre: 'Pop',
         year: 2014,
         tracks: 13,
-        image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=nfWlot6h_JM' // Taylor Swift - Shake It Off
     },
     {
         id: 2,
@@ -94,7 +103,8 @@ export const albums = [
         genre: 'Pop',
         year: 2022,
         tracks: 13,
-        image: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=b1kbLwvqugk' // Taylor Swift - Anti-Hero
     },
 
     // Rock
@@ -105,7 +115,8 @@ export const albums = [
         genre: 'Rock',
         year: 1975,
         tracks: 12,
-        image: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ' // Queen - Bohemian Rhapsody
     },
     {
         id: 4,
@@ -114,7 +125,8 @@ export const albums = [
         genre: 'Rock',
         year: 1977,
         tracks: 11,
-        image: 'https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=-tJYN-eG1zk' // Queen - We Will Rock You
     },
 
     // Electronic
@@ -125,7 +137,8 @@ export const albums = [
         genre: 'Electronic',
         year: 2001,
         tracks: 14,
-        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=FGBhQbmPwH8' // Daft Punk - Get Lucky
     },
     {
         id: 6,
@@ -134,7 +147,8 @@ export const albums = [
         genre: 'Electronic',
         year: 2013,
         tracks: 13,
-        image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=5NV6Rdv1a3I' // Daft Punk - Get Lucky (Official Audio)
     },
 
     // Hip-Hop
@@ -145,7 +159,8 @@ export const albums = [
         genre: 'Hip-Hop',
         year: 2002,
         tracks: 20,
-        image: 'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=lexLAjh8fPA' // Eminem - Without Me
     },
     {
         id: 8,
@@ -154,7 +169,8 @@ export const albums = [
         genre: 'Hip-Hop',
         year: 2010,
         tracks: 17,
-        image: 'https://images.unsplash.com/photo-1621621667797-e06afc217fb0?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1621621667797-e06afc217fb0?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=j5-yKhDd64s' // Eminem - Not Afraid
     },
 
     // Jazz
@@ -165,7 +181,8 @@ export const albums = [
         genre: 'Jazz',
         year: 1959,
         tracks: 5,
-        image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=ylXk1LBvIqU' // Miles Davis - So What
     },
     {
         id: 10,
@@ -174,7 +191,8 @@ export const albums = [
         genre: 'Jazz',
         year: 1970,
         tracks: 6,
-        image: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=SbCt-8ZOlH0' // Miles Davis - Bitches Brew
     },
 
     // Classical
@@ -185,7 +203,8 @@ export const albums = [
         genre: 'Classical',
         year: 1824,
         tracks: 4,
-        image: 'https://images.unsplash.com/photo-1507838153414-b4b713384ebd?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1507838153414-b4b713384ebd?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=chz_lBoL6uQ' // Beethoven - Symphony No. 9 (Ode to Joy)
     },
     {
         id: 12,
@@ -194,7 +213,8 @@ export const albums = [
         genre: 'Classical',
         year: 1808,
         tracks: 4,
-        image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=t3217H8JppI' // Beethoven - Symphony No. 5
     },
 
     // Country
@@ -205,7 +225,8 @@ export const albums = [
         genre: 'Country',
         year: 1968,
         tracks: 16,
-        image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=FywSzjRq0e4' // Johnny Cash - Folsom Prison Blues
     },
     {
         id: 14,
@@ -214,7 +235,8 @@ export const albums = [
         genre: 'Country',
         year: 2002,
         tracks: 15,
-        image: 'https://images.unsplash.com/photo-1483032469466-b937c425697b?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1483032469466-b937c425697b?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=8AHCfZTRGiI' // Johnny Cash - Hurt
     },
 
     // R&B
@@ -225,7 +247,8 @@ export const albums = [
         genre: 'R&B',
         year: 2016,
         tracks: 12,
-        image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=PeonBmeFR8o' // Beyoncé - Formation
     },
     {
         id: 16,
@@ -234,7 +257,8 @@ export const albums = [
         genre: 'R&B',
         year: 2022,
         tracks: 16,
-        image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=400&q=80',
+        videoUrl: 'https://www.youtube.com/watch?v=yjki-9Pthh0' // Beyoncé - BREAK MY SOUL
     },
 ];
 
