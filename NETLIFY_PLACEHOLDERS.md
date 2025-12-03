@@ -14,12 +14,12 @@ After deploying to Netlify, you'll need to update these placeholders with your a
 
 1. **Site URL** 
    - Location: Netlify Dashboard → Top of page
-   - Format: `https://random-name-12345.netlify.app`
+   - Format: `https://streamflixottapp.netlify.app`
    - Can be customized in Settings
 
 2. **Site Name**
    - Location: Site settings → General → Site details
-   - Format: `random-name-12345` (subdomain part)
+   - Format: `streamflixottapp` (subdomain part)
    - Click "Change site name" to customize
 
 3. **Site ID**
